@@ -17,8 +17,6 @@ use App\Http\Controllers\ZoomController; // Add this line
 */
 
 Route::get('/', [MainController::class, 'index']);
-Route::get('/meeting', [MeetingController::class, 'index']);
-Route::post('/generate-signature', [SignatureController::class, 'generate']);
 Route::post('/schedule-meeting', [ZoomController::class, 'scheduleMeeting']); // Add this line
 Route::get('/meetings', [ZoomController::class, 'getMeetings']); // Add this line
 Route::get('/join-meeting/{meeting_id}', [ZoomController::class, 'joinMeeting']); // Add this line
